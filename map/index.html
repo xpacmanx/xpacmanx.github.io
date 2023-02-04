@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            .me {
+                position: absolute;
+                left: 100px;
+                top: 100px;
+                z-index: 99;
+                width: 20px;
+                height: 20px;
+                background: #000;
+                margin-left: -10px;
+                margin-top: -10px;
+                border-radius: 50%;
+            }
+        </style>
+        <link href='./normilize.css' rel='stylesheet' />
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+    </head>
+    <body>
+        <div class="me"></div>
+        <div id='map' style='width: 200px; height: 200px;'></div>
+        <div id="demo"></div>
+    </body>
+    <script>
+        const params = new Proxy(new URLSearchParams(window.location.search), {
+            get: (searchParams, prop) => searchParams.get(prop),
+        });
+        // refresh = 10
+        let reload = Number(params.reload);
+        if (reload <= 0 || reload == undefined) reload = 10;
+        console.log(reload);
+
+        mapboxgl.accessToken = 'pk.eyJ1IjoieHBhY21hbngiLCJhIjoiUXhjQldrayJ9.2qOPAuvDUUGv0eHTXoucKw';
+            var map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/streets-v11',
+                center: [106.69022005322827, 10.795334447555327], // starting position [lng, lat]
+                zoom: 17, // starting zoom
+                bearing: 361,
+            });
+
+            var x = document.getElementById("demo");
+
+            function getLocation() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                } else {
+                    x.innerHTML = "Geolocation is not supported by this browser.";
+                }
+            }
+
+            function showPosition(position) {
+                map.setCenter([position.coords.longitude, position.coords.latitude]);
+            }
+
+            setInterval(() => {
+                getLocation();
+            }, reload * 1000)
+    </script>
+</html>

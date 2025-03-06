@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist Visa options for Vietnam - jackx</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        serif: ['Source Serif Pro', 'Georgia', 'serif'],
+                    },
+                    colors: {
+                        primary: '#292929',
+                        secondary: '#757575',
+                        accent: '#1a8917',
+                    },
+                    typography: {
+                        DEFAULT: {
+                            css: {
+                                'max-width': 'none',
+                                color: '#292929',
+                                a: {
+                                    color: '#1a8917',
+                                    textDecoration: 'none',
+                                    '&:hover': {
+                                        color: '#166914',
+                                    },
+                                },
+                                strong: {
+                                    color: '#292929',
+                                },
+                                h2: {
+                                    color: '#292929',
+                                    fontWeight: '700',
+                                    fontFamily: 'Source Serif Pro, Georgia, serif',
+                                },
+                                h3: {
+                                    color: '#292929',
+                                    fontWeight: '600',
+                                    fontFamily: 'Source Serif Pro, Georgia, serif',
+                                },
+                                blockquote: {
+                                    borderLeftColor: '#1a8917',
+                                    color: '#757575',
+                                    fontStyle: 'italic',
+                                },
+                                code: {
+                                    color: '#292929',
+                                    backgroundColor: '#f3f4f6',
+                                    borderRadius: '0.25rem',
+                                    padding: '0.125rem 0.25rem',
+                                },
+                                'code::before': {
+                                    content: '""',
+                                },
+                                'code::after': {
+                                    content: '""',
+                                },
+                                pre: {
+                                    backgroundColor: '#1a1a1a',
+                                    color: '#ffffff',
+                                },
+                                img: {
+                                    borderRadius: '0.5rem',
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer base {
+            .text-primary {
+                color: #292929;
+            }
+            .text-secondary {
+                color: #757575;
+            }
+            .text-accent {
+                color: #1a8917;
+            }
+            .bg-accent\/10 {
+                background-color: rgb(26 137 23 / 0.1);
+            }
+            .border-accent {
+                border-color: #1a8917;
+            }
+            .hover\:text-primary:hover {
+                color: #292929;
+            }
+            .hover\:text-accent:hover {
+                color: #1a8917;
+            }
+        }
+
+        @layer components {
+            .prose img {
+                @apply rounded-lg my-8;
+            }
+            
+            .post-card {
+                @apply flex flex-col rounded-lg transition-transform duration-200 hover:-translate-y-1;
+            }
+            
+            .category-tag {
+                @apply inline-block px-3 py-1 bg-gray-100 text-secondary rounded-full text-sm hover:bg-gray-200 transition-colors mr-2;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="/" class="text-2xl font-bold text-primary tracking-tight">
+                    <img src='/assets/images/logo.svg' alt="jackx"/>
+                </a>
+                <nav class="flex items-center space-x-6">
+                    <a href="/about" class="text-secondary hover:text-primary transition-colors">About</a>
+                    <!-- <a href="https://t.me/ipacmanx" class="text-secondary hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer">
+                        <svg class="w-10 h-10" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .24z"/>
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com/ipacmanx" class="text-secondary hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer">
+                        <svg class="w-10 h-10" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153.509.5.902 1.105 1.153 1.772.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 01-1.153 1.772c-.5.508-1.105.902-1.772 1.153-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 01-1.772-1.153 4.904 4.904 0 01-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 011.153-1.772A4.897 4.897 0 015.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 100 10 5 5 0 000-10zm6.5-.25a1.25 1.25 0 10-2.5 0 1.25 1.25 0 002.5 0zM12 9a3 3 0 110 6 3 3 0 010-6z"/>
+                        </svg>
+                    </a> -->
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="min-h-screen">
+        <article class="max-w-[680px] mx-auto px-4 sm:px-6 py-8">
+    <!-- Article Header -->
+    <header class="mb-8">
+        <!-- Publication Info -->
+        <div class="mb-4 text-sm text-secondary">
+            <div class="flex items-center gap-1">
+                
+            </div>
+        </div>
+
+        <!-- Title -->
+        <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-6 leading-tight">
+            Tourist Visa options for Vietnam
+        </h1>
+
+        <!-- Subtitle/Description -->
+        
+
+        <!-- Author Info & Meta -->
+        <div class="flex items-center justify-between border-b border-gray-200 pb-8">
+            <div class="flex items-center gap-3">
+                <img 
+                    src="/assets/images/default-avatar.png" 
+                    alt="Jack"
+                    class="w-12 h-12 rounded-full object-cover"
+                >
+                <div>
+                    <div class="flex items-center gap-2">
+                        <span class="font-medium text-primary">Jack</span>
+                        <!-- <button class="text-accent text-sm font-medium px-2 py-1 rounded-full border border-accent hover:bg-accent/10 transition-colors">
+                            Follow
+                        </button> -->
+                    </div>
+                    <div class="flex items-center gap-2 text-sm text-secondary">
+                        <time datetime="2025-03-05T00:00:00+07:00">March 5, 2025</time>
+                        <span>·</span>
+                        <span>3 min read</span>
+                        
+                        <span>·</span>
+                        
+                        <a href="/categories#general" class="hover:text-primary">
+                            general
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Share buttons -->
+            <div class="flex items-center gap-4 text-secondary">
+                <button class="hover:text-primary transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/>
+                    </svg>
+                </button>
+                <button class="hover:text-primary transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Featured Image -->
+    
+
+    <!-- Article Content -->
+    <div class="prose prose-lg max-w-none">
+        <p>Planning a trip to Vietnam? Understanding the country’s visa policies is essential. This guide provides up-to-date information on the 45-day visa exemption and the 90-day e-visa options available for tourists.</p>
+
+<p><img src="/assets/images/visa.webp" alt="Alt text" /></p>
+
+<h2 id="45-day-visa-exemption">45-Day Visa Exemption</h2>
+
+<p>As of August 15, 2023, Vietnam has extended its visa exemption policy, allowing citizens from 13 countries to stay visa-free for up to 45 days. The eligible countries are:</p>
+
+<ul>
+  <li><strong>Germany</strong></li>
+  <li><strong>France</strong></li>
+  <li><strong>Italy</strong></li>
+  <li><strong>Spain</strong></li>
+  <li><strong>United Kingdom</strong></li>
+  <li><strong>Russia</strong></li>
+  <li><strong>Japan</strong></li>
+  <li><strong>South Korea</strong></li>
+  <li><strong>Denmark</strong></li>
+  <li><strong>Sweden</strong></li>
+  <li><strong>Norway</strong></li>
+  <li><strong>Finland</strong></li>
+  <li><strong>Belarus</strong></li>
+</ul>
+
+<p>Citizens from these nations can enter Vietnam without a visa and remain for up to 45 days, regardless of passport type or entry purpose. Ensure your passport is valid for at least six months from your date of entry and has at least two blank pages.</p>
+
+<h2 id="90-day-e-visa">90-Day E-Visa</h2>
+
+<p>Vietnam offers a convenient e-visa system for citizens of all countries and territories. Key features of the 90-day e-visa include:</p>
+
+<ul>
+  <li><strong>Validity</strong>: Up to 90 days, with options for single or multiple entries.</li>
+  <li><strong>Application</strong>: Apply online through the official Vietnam Immigration Department’s e-visa portal.</li>
+  <li><strong>Fees</strong>: $25 USD for single-entry and $50 USD for multiple-entry, payable electronically. Note that fees are non-refundable, even if the application is denied.</li>
+</ul>
+
+<p><strong>Application Process</strong>:</p>
+
+<ol>
+  <li><strong>Prepare Required Documents</strong>:
+    <ul>
+      <li>A valid passport with at least six months’ validity remaining.</li>
+      <li>A recent digital passport-sized photo.</li>
+      <li>A scanned copy of your passport’s biographical page.</li>
+    </ul>
+  </li>
+  <li><strong>Submit Application</strong>:
+    <ul>
+      <li>Visit the official e-visa portal <a href="https://evisa.xuatnhapcanh.gov.vn/">Vietnam e‑visa portal</a>.</li>
+      <li>Complete the online application form with accurate personal and travel information.</li>
+      <li>Upload the required documents.</li>
+      <li>Pay the visa fee using the available electronic payment methods.</li>
+    </ul>
+  </li>
+  <li><strong>Receive and Print E-Visa</strong>:
+    <ul>
+      <li>Processing typically takes 3-5 working days.</li>
+      <li>Once approved, download and print your e-visa approval letter.</li>
+      <li>Present the printed e-visa along with your passport upon arrival in Vietnam.</li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>Important Notes</strong>:</p>
+
+<ul>
+  <li>Ensure all information provided in the application matches your passport details.</li>
+  <li>The e-visa is valid for entry through designated international checkpoints, including airports, land borders, and seaports. Verify that your intended point of entry accepts e-visas.</li>
+  <li>Overstaying your visa can result in fines or deportation. Plan your travel accordingly to avoid any issues.</li>
+</ul>
+
+<p>For the most current information and to apply for your e-visa, visit the official Vietnam Immigration Department’s e-visa portal <a href="https://evisa.xuatnhapcanh.gov.vn/">Vietnam e‑visa portal</a>.</p>
+
+<p>By understanding these visa options, you can better plan your visit to Vietnam and enjoy all the rich experiences this vibrant country has to offer.</p>
+
+<hr />
+
+<p><em>Note: Visa policies are subject to change. It’s advisable to check the latest information from official sources before planning your trip.</em></p>
+
+    </div>
+
+    <!-- Article Footer -->
+    <footer class="mt-12 pt-8 border-t border-gray-200">
+        <div class="flex flex-wrap gap-2">
+            
+            <a href="/categories#general" class="category-tag">
+                general
+            </a>
+            
+        </div>
+    </footer>
+</article>
+
+<!-- Engagement Floating Bar -->
+<div class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 py-3 px-4 sm:hidden">
+    <div class="flex justify-between items-center max-w-[680px] mx-auto">
+        <div class="flex items-center gap-4">
+            <button class="text-secondary hover:text-primary transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                </svg>
+            </button>
+            <button class="text-secondary hover:text-primary transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                </svg>
+            </button>
+        </div>
+        <div class="flex items-center gap-4">
+            <button class="text-secondary hover:text-primary transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/>
+                </svg>
+            </button>
+            <button class="text-secondary hover:text-primary transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div> 
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-secondary">
+            <p>&copy; 2025 jackx. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 

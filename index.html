@@ -1,76 +1,142 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="./styles/main.css" >
-    </head>
-    <body>
-        <header>
-            <div class="wrapper">
-                <div class="logo">
-                    <a href="/"><img src="./images/logo.svg"></a>
-                </div>
-                <ul class="menu">
-                    <li>Home</li>
-                    <li>Blog</li>
-                    <li>Videos</li>
-                </ul>
-                <ul class="social">
-                    <li><a href="https://instagram.com/ipacmanx"><img src="./images/telegram.svg" /></a></li>
-                    <li><a href="https://t.me/ipacmanx"><img src="./images/inst.svg" /></a></li>
-                </ul>
+---
+layout: default
+---
+
+<!-- <div class="bg-gradient-to-b from-gray-50 to-white py-24 sm:py-32">
+    <div class="max-w-2xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <h1 class="text-4xl sm:text-5xl font-bold text-primary tracking-tight">{{ site.title }}</h1>
+        <p class="mt-4 text-xl sm:text-2xl text-secondary">{{ site.description }}</p>
+    </div>
+</div> -->
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Featured Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        <!-- Saigonese - Large Block -->
+        <div class="bg-black text-white rounded-3xl p-8 md:p-12 flex flex-col justify-between min-h-[400px] relative overflow-hidden group">
+            <!-- Background Video -->
+            <video 
+                class="absolute inset-0 w-full h-full object-cover opacity-60"
+                autoplay 
+                muted 
+                loop 
+                playsinline
+            >
+                <source src="/assets/videos/saigon.webm" type="video/webm">
+            </video>
+
+            <!-- Content -->
+            <div class="relative z-10">
+                <h2 class="text-4xl font-bold mb-4">Become a Saigonese</h2>
+                <p class="text-gray-300 mb-6">Based in Saigon<br>Personal Stories in Vietnam and Fitting into Local Life</p>
+                <!-- <a href="/saigonese" class="inline-flex items-center text-white hover:text-accent transition-colors">
+                    <span>Explore stories</span>
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </a> -->
             </div>
-        </header>
-        
-        <div class="wrapper">
-            <section class="about">
-                <div class="about__row">
-                    <div class="about__element about__element--2x about__hello">
-                        Hi There, <br />
-                        I'm Jack Pak*
-                    </div>
-                    <div class="about__element about__sides">
-                        I have few sides such as..
-                    </div>
-                    <div class="about__element about__element--brick about__dev">
-                        <img src="./images/dev.png" />
-                        <span>Developer</span>
-                    </div>
-                    <div class="about__element about__element--brick about__video">
-                        <span>Video maker</span>
-                    </div>
-                    <div class="about__element about__element--brick about__travel">
-                        <span>Treveller</span>
-                    </div>
+
+            <!-- Gradient Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70"></div>
+        </div>
+
+        <!-- Right Side Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <!-- Kuan Concept -->
+            <div class="bg-purple-100 rounded-3xl p-6 flex flex-col justify-between group hover:bg-purple-200 transition-colors">
+                <div>
+                    <h3 class="text-xl font-bold mb-2">Kuan Concept</h3>
+                    <p class="text-gray-600 text-sm">Design, Tech, Oriental</p>
                 </div>
-                <div class="about__row">
-                    <div class="photo">
-                        <!-- <img src="./images/photo.jpg"> -->
-                    </div>
-                    <button type="button" class="about__button about__button--like">♡</button>
-                    <a href="https://t.me/ipacmanx" class="about__button">Message me for some urgent</a>
-                    <button type="button" class="about__button about__button--like about__button--dislike">⤬</button>
+                <div class="mt-4">
+                    <a href="https://kuanconcept.com" class="inline-flex items-center text-purple-600 hover:text-purple-800 transition-colors">
+                        <span>View more</span>
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </a>
                 </div>
-                <div class="about__row">
-                    <div class="about__element about__element--brick about__flags">
-                        <img src="./images/flags.png">
-                        Mixed korean and russian
-                    </div>
-                    <div class="about__element about__element--brick about__spb">
-                        From <br/>Saint-Petersburg
-                    </div>
-                    <div class="about__element about__sides">
-                        Also a lot of interests..
-                    </div>
-                    <div class="about__element about__element--brick about__saigon">
-                        Based in<br/>Saigon
-                    </div>
-                    <div class="about__element about__element--2x about__interests">
-                        3d printing, cameras, guitars, tech gear, streetwear, developing, automation, crypto
-                    </div>
+            </div>
+
+            <!-- Kuan Streetwear -->
+            <div class="bg-lime-100 rounded-3xl p-6 flex flex-col justify-between group hover:bg-lime-200 transition-colors">
+                <div>
+                    <h3 class="text-xl font-bold mb-2">Kuan Streetwear</h3>
+                    <p class="text-gray-600 text-sm">Digital</p>
                 </div>
-            </section>
-            <div class="about__additional">
-                *Original name is Evgenii Pak, but it so complicated to pronounce in world wide society, so, call me just Jack
+                <div class="mt-4">
+                    <a href="https://kuanstreetwear.com" class="inline-flex items-center text-lime-600 hover:text-lime-800 transition-colors">
+                        <span>Discover</span>
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Albums -->
+            <div class="bg-gray-100 rounded-3xl p-6 sm:col-span-2 flex flex-col justify-between group hover:bg-gray-200 transition-colors">
+                <div>
+                    <h3 class="text-xl font-bold mb-2">Albums</h3>
+                    <p class="text-gray-600 text-sm">Series of photos and videos</p>
+                </div>
+                <div class="mt-4">
+                    <!-- <a href="/albums" class="inline-flex items-center text-gray-600 hover:text-gray-800 transition-colors">
+                        <span>Browse collection</span>
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </a> -->
+                </div>
             </div>
         </div>
-    </body>
-</html>
+    </div>
+
+    <!-- Blog Posts Section -->
+    <div class="mt-16">
+        <h2 class="text-2xl font-bold mb-8">Latest Stories</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% for post in site.posts %}
+            <article class="post-card">
+                <div class="flex-1 space-y-4">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-2">
+                            <img src="{{ post.author_image | default: '/assets/images/default-avatar.png' | relative_url }}" 
+                                 alt="{{ post.author | default: site.author }}" 
+                                 class="w-6 h-6 rounded-full">
+                            <span class="text-primary">{{ post.author | default: site.author }}</span>
+                        </div>
+                        <time datetime="{{ post.date | date_to_xmlschema }}" class="text-secondary text-sm">
+                            {{ post.date | date: "%B %-d, %Y" }}
+                        </time>
+                    </div>
+                    
+                    <h2 class="font-serif text-xl font-bold leading-snug">
+                        <a href="{{ post.url | relative_url }}" class="text-primary hover:text-accent transition-colors">
+                            {{ post.title }}
+                        </a>
+                    </h2>
+                    
+                    <p class="text-secondary line-clamp-3">
+                        {{ post.excerpt | strip_html | truncatewords: 30 }}
+                    </p>
+                    
+                    <div class="flex items-center justify-between">
+                        <div class="flex flex-wrap gap-2">
+                            {% for category in post.categories %}
+                            <a href="{{ site.baseurl }}/categories#{{ category | slugify }}" class="category-tag">
+                                {{ category }}
+                            </a>
+                            {% endfor %}
+                        </div>
+                        <span class="text-sm text-secondary">
+                            {{ post.content | number_of_words | divided_by: 200 | plus: 1 }} min read
+                        </span>
+                    </div>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</div>

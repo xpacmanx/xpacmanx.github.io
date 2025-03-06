@@ -1,1 +1,27 @@
-theme: jekyll-theme-cayman
+title: jackx
+description: A collection of thoughts and ideas
+baseurl: ""
+url: ""
+
+# Build settings
+markdown: kramdown
+permalink: /:title/
+
+# Exclude files from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .git
+
+# Author settings
+author: Jack
+social:
+  twitter: x.com/ipacmanx
+  github: github.com/xpacmanx
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
